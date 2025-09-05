@@ -72,7 +72,6 @@ addition_of_luggage_weight=0
     puts " the extra charge is #{extra_charge}"
     end
     
-    #break if nro_maletas==i 
         
 end
 if addition_of_luggage_weight>47.5
@@ -89,7 +88,7 @@ else
     payment=gets.chomp.to_i
     change= payment-total
     puts "el vuelto que esperas es #{change}"
-#end
+
 result={}
 billetes=[1000, 500, 250, 100, 30, 10, 2]
 
@@ -103,8 +102,7 @@ billetes.each do |cantidad|
         puts "entonces el vuelto sería repartido como : #{cantidad_de_ese_billete} billetes/soles de #{result[:cantidad_de_ese_billete]} soles"
     end
 end    
-#end
-#change=0
+
     if change>0
     cantidadDeCaramelos=change*10
     puts "y te daría #{cantidadDeCaramelos} caramelos pues sobra #{change} sol"

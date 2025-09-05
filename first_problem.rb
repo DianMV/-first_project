@@ -99,7 +99,6 @@ billetes.each do |cantidad|
         
     if change>=cantidad
         cantidad_de_ese_billete=change/cantidad
-        puts "la cantidad de billetes del billete/moneda de #{cantidad} soles es #{cantidad_de_ese_billete}"
         change-=cantidad_de_ese_billete*cantidad
         result[:cantidad_de_ese_billete]=cantidad
         puts "entonces el vuelto sería repartido como : #{cantidad_de_ese_billete} billetes/soles de #{result[:cantidad_de_ese_billete]} soles"

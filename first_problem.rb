@@ -36,16 +36,6 @@ addition_of_luggage_weight=0
     end
     
     if i<=2
-        #if weight>30
-        #puts "el equipaje no podra ser llevado"
-        #puts "quiere llevar la maleta?"
-        #answer=gets.chomp.downcase
-            #if answer=="si"
-            #redo
-            #elsif answer=="no"
-            #next
-            #end
-        #elsif weight>24 
         if weight>24 
         extra_charge+=134
         elsif weight>23 && weight<24
@@ -56,24 +46,13 @@ addition_of_luggage_weight=0
     
     
     if i>2
-        #if weight>30
-        #puts "no puede llevar esa maleta"
-        #puts "quiere llevar la maleta?"
-        #answer=gets.chomp.downcase
-            #if answer=="si"
-            #redo
-            #elsif answer=="no"
-            #next
-            #end
-        #elsif weight>0
         if weight>0
         extra_charge+=100
         end
     puts " the extra charge is #{extra_charge}"
-    end
-    
-        
+    end      
 end
+
 if addition_of_luggage_weight>47.5
         extra_charge+=117
         puts " the extra charge is #{extra_charge}"

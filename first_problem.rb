@@ -1,3 +1,27 @@
+#Pago por exceso de equipaje
+#----------------------------
+#Escribir el algoritmo que decide el monto que los pasajeros de una aerolínea deben pagar por exceso de equipaje.
+
+#- El algoritmo debe atender a un pasajero
+#- A cada pasajero se le solicita:
+    #- Su nombre
+	#- El peso de cada una de sus maletas en kilos, el peso debe ser preciso (acepta gramos)
+	#- El máximo de maletas posibles para un pasajero son 4
+	#- Si un pasajero no lleva 4 maletas, cuando se le solicite el peso, se ingresará 0
+	#- Las dos primeras maletas son consideradas equipaje regular.
+	#- Un equipaje regular puede pesar como máximo 23 kilos.
+	#- Las condiciones para pagar por peso extra son:
+	#	* Si un equipaje regular pesa más de 23 kilos, pero no supera los 24, no se paga extra. Caso contrario se pagará 134 soles de cargo extra.
+	#	* Si los dos equipajes superan los 23 kilos, pero no los 24, y la suma del peso de estos es mayor a 47.5, se debe pagar un cargo extra de 117 soles.
+	#	* Si un equipaje regular supera los 30 kilos, este no podrá ser llevado en el avión. El sistema indicará que no podrá llevar dicha maleta.
+	#- Las dos últimas maletas son consideradas equipaje extra. Estas pueden pesar hasta un máximo de 30 kilos, si la maleta pesa más de 30 kilos, el pasajero no podrá llevar esta maleta. El sistema le indicará que no podrá llevar dicha maleta. El pago por cada equipaje extra es de 100 soles.
+#- El algoritmo debe mostrar como resultado el monto total a pagar por equipaje extra
+#...........................
+#- Si el pasajero debe pagar, el algoritmo le preguntará con cuanto pagará
+##- Considerando billetes de 1000, 500, 250, 100, 30, 10, 2: el sistema debe calcular el vuelto a entregar con la menor cantidad posible de billetes. En caso de no tener la cantidad exacta para entregar el vuelto, debe entregar 10 caramelos de limón por cada sol que falte.
+#- Si el pasajero no tiene el dinero suficiente para pagar por el sobre peso, el sistema le indicará que no puede llevar todo ese sobre peso.
+#...........................
+
 puts "cual es su nombre?"
 name=gets.chomp
 nro_maletas=0

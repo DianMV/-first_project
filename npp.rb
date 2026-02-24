@@ -27,9 +27,9 @@ if numb > numbers[numbers.length - 1]
   (left...total).each do |j|
     new << numbers[j]
   end
-  puts new
+  puts new.inspect
 
 else
   numbers << numb
-  puts numbers
+  puts numbers.inspect
 end

@@ -2,34 +2,35 @@
 #Se le pide crear un programa que pida al usuario un número entero y lo agregue al array, de tal manera que mantenga el array ordenado después de agregar al número entero.
 #No puede utilizar algoritmos de ordenamiento.
 
-numbers = [9, 6, 5, 3, 1]
+orig_array= [9, 6, 5, 3, 1]
 puts "what's the number you wanna add"
 numb = gets.chomp.to_i
 quantity = 0
-new = []
+new_array = []
 
-if numb > numbers[numbers.length - 1]
-  numbers.each do |i|
+if numb > orig_array[orig_array.length - 1]
+  orig_array.each do |i|
     if numb < i
-      new << i
-      quantity += 1
+      new_array << i
+      quantity += 1 #the amount is gonna be the first number from the loop range so the new array can add the reminding numbers from the original array.
     else
-      new << numb
+      new_array << numb
 
       break
     end
   end
 
-  total = numbers.length
+  total = orig_array.length
   left = quantity
 
-  puts "#{total} and #{left}"
+  #puts "#{total} and #{left}"
+
   (left...total).each do |j|
-    new << numbers[j]
+    new_array << orig_array[j]
   end
-  puts new.inspect
+  puts new_array.inspect
 
 else
-  numbers << numb
-  puts numbers.inspect
+  orig_array << numb
+  puts orig_array.inspect
 end

@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # 6.- Escriba un algoritmo que pida un número entero positivo que es un factorial,
 # y presente como resultado el número al que corresponde el factorial ingresado.
 number = 1

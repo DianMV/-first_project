@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # 2.- Escriba un algoritmo que pida dos números enteros positivos y presente todos los números primos comprendidos entre dichos números. El segundo número ingresado no es necesariamente mayor que el primero.
 
 def positive(a)
@@ -20,7 +22,7 @@ def one_or_zero?(n)
 end
 
 def prime?(a, b)
-  a % b == 0
+  (a % b).zero?
 end
 
 def first_num_greater?(a, b)

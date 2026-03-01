@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # 8.- Escriba un algoritmo que pida a un pasajero de avión el peso de sus maletas.
 # El pasajero no tiene límite de maletas a llevar.
 # El programa pedirá el peso de cada una de las maletas, y dejará de pedir cuando se ingrese 0. Se asume que al ingresar 0, se está indicando que no se llevarán más maletas.
@@ -10,10 +12,10 @@ weight = 1
 loop do
   puts "what's the luggage's weight?"
   weight = gets.chomp.to_i
-  if weight < 0
+  if weight.negative?
     puts 'the number should be positive'
     next
-  elsif weight == 0
+  elsif weight.zero?
     break
   elsif weight > 30
     puts "you can't take that luggage"
@@ -25,7 +27,7 @@ loop do
   extra_cost += 35 if weight > 23
 end
 
-if extra_cost == 0
+if extra_cost.zero?
   puts "the amount of luggages you're carrying is #{amount} and you have no extra cost for the luggage/s"
 else
   puts "the amount of luggages you're carrying is #{amount} and you have to pay $#{extra_cost}"

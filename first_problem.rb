@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Pago por exceso de equipaje
 #----------------------------
 # Escribir el algoritmo que decide el monto que los pasajeros de una aerolínea deben pagar por exceso de equipaje.
@@ -25,10 +27,10 @@
 puts 'cual es su nombre?'
 name = gets.chomp
 nro_maletas = 0
-until nro_maletas > 0 && nro_maletas <= 4
+until nro_maletas.positive? && nro_maletas <= 4
   puts "#{name}, cuantas maletas llevas? (maximo 4)"
   nro_maletas = gets.chomp.to_i
-  puts 'error, ingrese otro numero mayor a 0 y menor igual a 4, ctmr' if nro_maletas == 0 || nro_maletas > 4
+  puts 'error, ingrese otro numero mayor a 0 y menor igual a 4, ctmr' if nro_maletas.zero? || nro_maletas > 4
 end
 extra_charge = 0
 addition_of_luggage_weight = 0
@@ -68,7 +70,7 @@ addition_of_luggage_weight = 0
 
   next unless i > 2
 
-  extra_charge += 100 if weight > 0
+  extra_charge += 100 if weight.positive?
   puts " the extra charge is #{extra_charge}"
 end
 
@@ -78,7 +80,7 @@ if addition_of_luggage_weight > 47.5
 end
 total = extra_charge
 
-if total == 0
+if total.zero?
   puts 'no hay un pago exra que debe realizar'
 else
   puts "el monto total por equipaje que debe pagar por equipaje extra es #{extra_charge}"
@@ -99,7 +101,7 @@ else
     puts "entonces el vuelto sería repartido como : #{cantidad_de_ese_billete} billetes/soles de #{result[:cantidad_de_ese_billete]} soles"
   end
 
-  if change > 0
+  if change.positive?
     cantidadDeCaramelos = change * 10
     puts "y te daría #{cantidadDeCaramelos} caramelos pues sobra #{change} sol"
   end

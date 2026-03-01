@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # 7- Escriba un algoritmo que pida a un pasajero de avión el peso de sus maletas.
 # *El pasajero llevará máximo 10 maletas.
 # Si una maleta pesa 0, significa que no la llevará
@@ -10,11 +12,11 @@ extra_cost = 0
 (1..10).each do |i|
   puts "what's the weight for the luggage #{i}?"
   weight = gets.chomp.to_i
-  if weight > 0 && weight <= 30
+  if weight.positive? && weight <= 30
     amount += 1
-  elsif weight == 0
+  elsif weight.zero?
     next
-  elsif weight < 0
+  elsif weight.negative?
     puts 'the weight should be positive, try again'
     redo
   end
@@ -27,7 +29,7 @@ extra_cost = 0
   end
 end
 
-if extra_cost == 0
+if extra_cost.zero?
   puts "the amount of luggages you would carry is #{amount} and you don't have an extra cost to pay"
 else
   puts "the amount of luggages you would carry is #{amount} and the extra cost you would have to pay is $#{extra_cost} "

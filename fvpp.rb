@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 # 5.- Escriba un algoritmo que pida un número entero mayor o igual a cero, y presente como resultado el factorial de dicho número.
 n = -1
-until n >= 0 && n % 1 == 0
+until n >= 0 && (n % 1).zero?
   puts 'write a integer number greater or equal to 0'
   n = gets.chomp.to_f
 end

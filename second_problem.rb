@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Leonard, Sheldon, Penny, Howard y Raj deciden hacer una apuesta geek. Como recompensa,
 # el ganador de la apuesta se quedará con la colección de comics de los otros y la colección de zapatos de Penny.
 # La apuesta consiste en identificar la mayor cantidad posible de números perfectos.
@@ -38,7 +40,7 @@ greater = 0
   (first..second).each do |i|
     sum_div = 0
     (1...i).each do |j|
-      sum_div += j if i % j == 0
+      sum_div += j if (i % j).zero?
     end
     perf_num << i if sum_div == i
   end

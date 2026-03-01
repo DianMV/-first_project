@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # 4.- Escriba un algoritmo que pida los nombres y las puntuaciones obtenidas por cada uno de los 10 equipos de Quidditch que participan en la copa "Albus Percival Wulfric Brian Dumbledore", e indique quién es el campeón y quién obtuvo el último puesto.
 greatest_score = 0
 lowest_score = Float::INFINITY

@@ -4,8 +4,10 @@
 notas  = [10, 12, 12, 14, 15, 15, 17, 19, 19, 19, 20]
 carnes = [101, 102, 103, 104, 105, 106, 107, 108, 109,110, 111]
 
-puts "write a number"
-num=gets.chomp.to_i
+a=false
+until a==true
+  puts "write a number that is included on the array notas"
+  num=gets.chomp.to_i
 
 
   middle=(notas.length - 1)/2
@@ -13,12 +15,14 @@ num=gets.chomp.to_i
   (0..middle).reverse_each do |i| #using reverse to avoid skiping the next element when an element repeats twice
     if notas[i]==num
       notas.delete_at(i)
+      a=true
     end
   end
   elsif num>notas[middle] 
     (middle..notas.length - 1).reverse_each do |i| #In case the middle number was smaller than num, we would take the numbers from the middle to the last element since num could only repeat itself further ahead
       if notas[i]==num
         notas.delete_at(i)
+        a=true
       end
     end
   
@@ -26,7 +30,9 @@ num=gets.chomp.to_i
     (0..notas.length - 1).reverse_each do |i|
       if notas[i]==num
         notas.delete_at(i)
+        a=true
       end
     end
   end
+end
   puts notas.inspect

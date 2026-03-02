@@ -9,9 +9,6 @@ num=gets.chomp.to_i
 
 
   middle=(notas.length - 1)/2
-  if num ==notas[middle]
-  notas.delete_at(middle)
-  end
   if num<notas[middle]
   (0..middle).reverse_each do |i|
     if notas[i]==num

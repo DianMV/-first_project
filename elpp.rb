@@ -16,14 +16,12 @@ student_name = [
   'Díaz Rivera, Ana',
   'Espinoza Torres, Luis'
 ]
-program = ['S', 'E', 'C', 'A']
-GPA = [15.8, 17.2, 16.5, 18.0, 17.9]
+GPA = [15.8, 17.2, 16.5, 18.0, 17.9].freeze
 
 n = 0
-GPA_2 = []
+GPA_2 = [].freeze
 id_2 = []
 student_name_2 = []
-
 
 while n < 5
   greatest = 0

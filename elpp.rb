@@ -16,10 +16,10 @@ student_name = [
   'Díaz Rivera, Ana',
   'Espinoza Torres, Luis'
 ]
-GPA = [15.8, 17.2, 16.5, 18.0, 17.9].freeze
+GPA = [15.8, 17.2, 16.5, 18.0, 17.9]
 
 n = 0
-GPA_2 = [].freeze
+GPA_2 = []
 id_2 = []
 student_name_2 = []
 
